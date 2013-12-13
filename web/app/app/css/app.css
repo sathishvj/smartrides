@@ -1,0 +1,536 @@
+/* app css stylesheet */
+/* This part was required for drop down menus.
+.menu {
+	list-style: none;
+	border-bottom: 0.1em solid black;
+	margin-bottom: 2em;
+	padding: 0 0 0.5em;
+}
+
+.menu:before {
+	content: "[";
+}
+
+.menu:after {
+	content: "]";
+}
+
+.menu > li {
+	display: inline;
+}
+
+.menu > li:before {
+	content: "|";
+	padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+	content: "";
+	padding: 0;
+}
+*/
+/* navbar - begin */
+.navbar {
+  font-size: 12px;
+  height: 25px;
+}
+.navbar-header {
+  margin-top: 5px;
+}
+.navbar-header .logo {
+  font-size: 24px;
+  text-decoration: none;
+  color: steelblue;
+  margin-right: 5px;
+}
+.navbar-header .logo a {
+  text-decoration: none;
+}
+.navbar-right p {
+  font-style: italic;
+}
+#gsignin {
+  padding-top: 10px;
+  cursor: pointer;
+  /*
+ *    background: url("../img/gsignin-base.png") no-repeat;
+ *    background: cover;
+ *
+ *    &:hover{
+ *        background: url("../img/gsignin-hover.png") no-repeat;
+ *    }
+ */
+
+}
+/* navbar - end */
+/* About page - begin */
+.demobox {
+  height: 175px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.demobox h2 {
+  color: #333333;
+}
+.demobox h3 {
+  font-style: italic;
+  color: #555555;
+}
+/* About page - end */
+/* Boxes page - begin*/
+.box {
+  height: 200px;
+  margin: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.box:hover {
+  -moz-box-shadow: 1px 1px 1px 2px yellow;
+  -webkit-box-shadow: 1px 1px 1px 2px yellow;
+  box-shadow: 1px 1px 1px 2px yellow;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  -ms-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+.boxBack {
+  padding: 5px;
+  font-style: italic;
+  opacity: 0.75;
+}
+.box-pink {
+  background-color: lightpink;
+}
+.box-blue {
+  background-color: lightblue;
+}
+.box-green {
+  background-color: lightgreen;
+}
+.box-coral {
+  background-color: lightcoral;
+}
+.box-cyan {
+  background-color: lightcyan;
+}
+.box-salmon {
+  background-color: lightsalmon;
+}
+.box-seagreen {
+  background-color: lightseagreen;
+}
+.box-gray {
+  background-color: lightgray;
+}
+/* quote box - begin */
+.quoteBox {
+  margin-top: 5px;
+  overflow: hidden;
+}
+.quoteBox .quote {
+  width: 100%;
+  height: 140px;
+  font-size: 30px;
+  overflow: hidden;
+  color: purple;
+  font-style: italic;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottombottom, from(#000000), color-stop(50%, rgba(0, 0, 0, 0)), to(#000000));
+  text-shadow: 0 2px 0 #e9e9e9;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+.quoteBox .author {
+  width: 100%;
+  margin-top: 5px;
+  height: 25px;
+  font-size: 16px;
+  overflow: hidden;
+  text-align: right;
+  font-style: italic;
+}
+.quoteBox .source {
+  width: 100%;
+  margin-top: 5px;
+  height: 25px;
+  font-size: 16px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  text-align: right;
+  font-style: italic;
+}
+/* quote box - end */
+/* word box - begin */
+.wordBox {
+  margin-top: 5px;
+  overflow: hidden;
+}
+.wordBox .word {
+  width: 100%;
+  height: 70px;
+  font-size: 34px;
+  overflow: hidden;
+  font-style: bold;
+  color: darkblue;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottombottom, from(#000000), color-stop(50%, rgba(0, 0, 0, 0)), to(#000000));
+  text-shadow: 0 2px 0 #e9e9e9;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+.wordBox .meaning {
+  width: 100%;
+  margin-top: 5px;
+  height: 120px;
+  font-size: 16px;
+  overflow: hidden;
+}
+/* word box - end */
+/* figurative box - begin */
+.figurativeBox {
+  margin-top: 5px;
+  overflow: hidden;
+}
+.figurativeBox .phrase {
+  width: 100%;
+  height: 100px;
+  font-size: 24px;
+  overflow: hidden;
+  font-style: bold;
+  color: darkblue;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottombottom, from(#000000), color-stop(50%, rgba(0, 0, 0, 0)), to(#000000));
+  text-shadow: 0 2px 0 #e9e9e9;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+.figurativeBox .meaning {
+  width: 100%;
+  margin-top: 5px;
+  height: 55px;
+  font-size: 16px;
+  overflow: hidden;
+}
+.figurativeBox .type {
+  width: 100%;
+  margin-top: 5px;
+  height: 20px;
+  font-size: 14px;
+  overflow: hidden;
+  text-shadow: #ffffff 0px 1px 0, #000000 0 -1px 0;
+  color: white;
+  font-style: italic;
+  text-align: right;
+}
+/* figurative box - end */
+/* foreign box - begin */
+.foreignBox {
+  margin: 5px;
+  overflow: hidden;
+}
+.foreignBox .phrase {
+  width: 100%;
+  height: 80px;
+  font-size: 34px;
+  overflow: hidden;
+  font-style: bold;
+  color: purple;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottombottom, from(#000000), color-stop(50%, rgba(0, 0, 0, 0)), to(#000000));
+  text-shadow: 0 2px 0 #e9e9e9;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+.foreignBox .meaning {
+  width: 100%;
+  margin-top: 5px;
+  height: 70px;
+  font-size: 16px;
+  overflow: hidden;
+}
+.foreignBox .language {
+  width: 100%;
+  margin-top: 5px;
+  height: 30px;
+  font-size: 14px;
+  overflow: hidden;
+  text-shadow: #ffffff 0px 1px 0, #000000 0 -1px 0;
+  color: light-blue;
+  font-style: italic;
+  text-align: right;
+}
+/* foregin box - end */
+/* putdown box - begin */
+.putdownBox {
+  margin: 5px;
+  overflow: hidden;
+}
+.putdownBox .putdown {
+  width: 100%;
+  /*margin: 5px;*/
+
+  height: 190px;
+  font-size: 34px;
+  overflow: hidden;
+  font-style: italic;
+}
+/* putdown box - end */
+/* plus box - begin */
+.plusBox {
+  margin: 5px;
+  overflow: hidden;
+}
+.plusBox .links {
+  width: 100%;
+  margin-top: 5px;
+  height: 25px;
+  font-size: 16px;
+  overflow: hidden;
+}
+.plusBox .content {
+  width: 100%;
+  height: 75px;
+  font-size: 14px;
+  overflow: hidden;
+  color: black;
+}
+.plusBox .image img {
+  /*width: 100%;*/
+
+  margin-top: 5px;
+  height: 85px;
+  /*min-height: 100%;*/
+
+  overflow: hidden;
+  border: 0px;
+  width: auto;
+}
+/* plus box - end */
+/* Boxes page - end */
+/*
+ *.hoverMenu {
+ *    position: relative;
+ *    top: 0;
+ *    left: 0;
+ *    height: 100px;
+ *    background-color: white;
+ *}
+ */
+/* Admin page  - begin */
+.drop-box {
+  background: #F8F8F8;
+  border: 5px dashed #DDD;
+  width: 200px;
+  height: 65px;
+  text-align: center;
+  padding-top: 35px;
+  margin: 10px;
+}
+.drop-box.dragover {
+  border: 5px dashed blue;
+}
+.response {
+  padding-top: 30px;
+}
+.response li {
+  color: blue;
+  font-size: smaller;
+  padding-bottom: 5px;
+}
+.progress {
+  display: inline-block;
+  width: 100px;
+  border: 3px groove #CCC;
+}
+.progress div {
+  font-size: smaller;
+  background: orange;
+  width: 0;
+}
+/* Admin page  - end */
+/* box-mask - begin */
+/* box-mask - end */
+/* app name - begin */
+/* fancy sticking out css animation */
+.letter {
+  display: inline-block;
+  /*font-weight: 900;*/
+
+  /*font-size: 8em;*/
+
+  font-size: 24px;
+  margin: 0.2em;
+  position: relative;
+  color: #00B4F1;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 400;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before,
+.letter:after {
+  position: absolute;
+  content: attr(data-letter);
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  top: 0;
+  left: 0;
+}
+.letter,
+.letter:before,
+.letter:after {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.letter:before {
+  color: #fff;
+  text-shadow: -1px 0px 1px rgba(255, 255, 255, 0.8), 1px 0px 1px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+  -webkit-transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+}
+.letter:after {
+  color: rgba(0, 0, 0, 0.11);
+  z-index: 2;
+  -webkit-transform: scale(1.08, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 1deg);
+  transform: scale(1.08, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 1deg);
+}
+.letter:hover:before {
+  color: #fafafa;
+  -webkit-transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+}
+.letter:hover:after {
+  -webkit-transform: scale(1.08, 1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg, 22deg);
+  transform: scale(1.08, 1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg, 22deg);
+}
+/* app name - end */
+/* Glow effect - begin */
+.text-glow,
+.text-glow:hover,
+.text-glow:focus {
+  text-shadow: none;
+  -webkit-transition: 1000ms linear 0s;
+  -moz-transition: 1000ms linear 0s;
+  -o-transition: 1000ms linear 0s;
+  transition: 1000ms linear 0s;
+  outline: 0 none;
+}
+.text-glow:hover,
+.text-glow:focus {
+  /*color: #fff;*/
+
+  color: lightblue;
+  /*text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;*/
+
+  text-shadow: -1px 1px 8px #ffffcc, 1px -1px 8px #ffff00;
+}
+/* Glow effect - end */
+/* box actions - begin */
+.actions {
+  display: none;
+  width: 100%;
+  height: 50px;
+  /*height: 100%;*/
+
+  padding: 5px;
+  top: 125px;
+  left: 0;
+  position: absolute;
+  /*background-color: rgba(255, 255, 255, 0.9);*/
+
+  background-color: yellow;
+  opacity: 0.9;
+  -moz-box-shadow: 1px 1px 1px 2px yellow;
+  -webkit-box-shadow: 1px 1px 1px 2px yellow;
+  box-shadow: 1px 1px 1px 2px yellow;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.actions i {
+  padding: 5px;
+}
+.actions .box-title {
+  padding: 5px;
+  font-size: 12px;
+  font-style: italic;
+  color: steelblue;
+  text-transform: uppercase;
+  float: left;
+}
+.actions .fa {
+  /*float: right;*/
+
+  margin-left: 3px;
+  cursor: pointer;
+}
+.actions .fa:hover {
+  color: steelblue;
+}
+.box:hover .actions {
+  display: block;
+}
+/*.box:hover .actions {*/
+/*opacity: 1;*/
+/*}*/
+/* box actions - end */
+/* social buttons - begin */
+li .g-plusone,
+.twitter-share-button,
+.fb-like {
+  font-size: 1px;
+  display: inline-block;
+}
+/* social buttons - end */
+/* context buttons - begin */
+#context-buttons {
+  display: inline-block;
+}
+/* context buttons - end */
+/* help - begin */
+#helpBox {
+  border: 1px dashed lightblue;
+  border-radius: 5px;
+}
+/* help - end */
+/* global speed - begin */
+#globalSpeed {
+  display: inline-block;
+}
+#globalSpeed #saveToGDrive {
+  background: #ffffff url('../img/drive.png') center no-repeat;
+  /*background-size: 100%;*/
+
+}
+/* global speed - end */
+/* feedback page - begin */
+#feedbackPage #info {
+  margin: 15px;
+  font-size: 16px;
+}
+/* feedback page - end */
+/* maps - begin */
+.angular-google-map {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.mapinfo {
+  font-style: italic;
+  height: 60px;
+  display: none;
+}
+.box-gray:hover .mapinfo {
+  display: block;
+}
+.box-gray:hover .angular-google-map {
+  height: 140px;
+  width: 100%;
+  display: block;
+}
+/* maps - end */

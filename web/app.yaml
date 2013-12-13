@@ -1,0 +1,56 @@
+application: smartride-webvj
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /
+  static_files: app/app/index.html
+  upload: app/app/(.*\.html)
+
+- url: /favicon\.ico
+  static_files: app/app/img/favicon.ico
+  upload: app/app/img/favicon\.ico
+
+- url: /(.*\.html)
+  static_files: app/app/\1
+  upload: app/app/(.*\.html)
+
+- url: /(.*\.json)
+  static_files: app/app/\1
+  upload: app/app/(.*\.json)
+
+- url: /css
+  static_dir: app/app/css
+
+- url: /img
+  static_dir: app/app/img
+
+- url: /js
+  static_dir: app/app/js
+
+- url: /lib
+  static_dir: app/app/lib
+
+- url: /partials
+  static_dir: app/app/partials
+
+#- url: /partials/admin.html
+  #static_files: app/app/partials/admin.html
+  #upload: app/app/partials/admin.html
+  #login: admin
+
+#- url: /admin/.*
+  #script: _go_app
+  #login: admin
+
+- url: /.*
+  script: _go_app
+
+skip_files:
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- misc/.*
