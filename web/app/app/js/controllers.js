@@ -18,6 +18,9 @@ angular.module('myApp.controllers', [])
 			case "/bikes":
 				$scope.activeLink = "Bikes";
 				break;
+			case "/bikers":
+				$scope.activeLink = "Bikers";
+				break;
 			case "/Biker Gangs":
 				$scope.activeLink = "BikerGangs";
 				break;
@@ -994,25 +997,37 @@ angular.module('myApp.controllers', [])
 		}
     }])
     .controller('SensorsCtrl', ["$scope", "$http", "$location", '$route', "apigeeDataService", function ($scope, $http, $location, $route, apigeeDataService) {
-		$scope.myData = [{name: "Moroni", age: 50},
-			{name: "Tiancum", age: 43},
-			{name: "Jacob", age: 27},
-			{name: "Nephi", age: 29},
-			{name: "Enos", age: 34}
-		];
+		/*
+		 *$scope.myData = [{name: "Moroni", age: 50},
+		 *    {name: "Tiancum", age: 43},
+		 *    {name: "Jacob", age: 27},
+		 *    {name: "Nephi", age: 29},
+		 *    {name: "Enos", age: 34}
+		 *];
+		 */
 
 		
 		 $scope.apigee = apigeeDataService;
-		 $scope.apigee.refreshSensorData();
+		 //$scope.apigee.refreshSensorData();
 		 $scope.myData = $scope.apigee.entities;
-		console.log($scope); 
+		 //console.log($scope); 
 
 		$scope.gridOptions = { 
 			data: 'myData',
 			//data: $scope.apigee.entities
 			//data: $scope.apigee.entities
 			showGroupPanel: true,
-			jqueryUIDraggable: true
+			jqueryUIDraggable: true,
+			columnDefs: [{field: 'VehicleID', width: 80}, 
+				{field:'Timestamp', width: 150},
+				{field:'GpsE', displayName: 'Longitude',  width: 120},
+				{field:'GpsN', displayName: 'Latitude',  width: 120},
+				{field:'Humidity', width: 80, cellTemplate: '<div ng-class="{pinkcell: row.getProperty(col.field) > 82}"><div class="ngCellText">{{row.getProperty(col.field)}}</div></div>'},
+				{field:'Temperature', width: 80, cellTemplate: '<div ng-class="{orangecell: row.getProperty(col.field) > 78}"><div class="ngCellText">{{row.getProperty(col.field)}}</div></div>'},
+				{field:'AmbientTemp', width: 80},
+				{field:'Vehicle', width: 120},
+				{field:'Owner', width: 120}
+			]
 		};
 
 		/*
@@ -1027,17 +1042,51 @@ angular.module('myApp.controllers', [])
 		 *});
 		 */
 		
-			$http({method: 'GET', url: 'https://api.usergrid.com/dpacmittal/smartride/data?access_token=YWMtUb-iomSwEeO37neVzQ_UIwAAAUMU2UVKeqDJX-ONKdlr3hFOIdCavLPO4f8'}).
-				  success(function(data, status, headers, config) {
-					  console.log("Data from app services:" + data + "\n, with status: " + status);
-					  console.log(data.entities);
-					  //apigee.allData = data;
-					  //apigee.entities = data.entities;
-					  //$scope.gridOptions.data = data.entities;
-					  //$scope.$apply();
-				  }).
-				  error(function(data, status, headers, config) {
-					  console.log("Error in http request to  app services:" + data+ "\n with status: " + status);
-				  });
+		$scope.deleteAll = function() {
+			$scope.apigee.deleteAll();
+		};
 		
+    }])
+    .controller('BikesCtrl', ["$scope", "$http", "$location", '$route', "apigeeDataService", function ($scope, $http, $location, $route, apigeeDataService) {
+		 $scope.apigee = apigeeDataService;
+		 //$scope.apigee.refreshSensorData();
+		 $scope.myData = $scope.apigee.entities;
+
+		$scope.gridOptions = { 
+			data: 'myData',
+			showGroupPanel: true,
+			jqueryUIDraggable: true,
+			columnDefs: [{field: 'VehicleID', width: 80}, 
+				{field:'Vehicle', width: 180},
+				{field:'GpsE', displayName: 'Longitude',  width: 180},
+				{field:'GpsN', displayName: 'Latitude',  width: 180},
+				{field:'Humidity', width: 120},
+				{field:'Temperature', width: 120},
+				{field:'Timestamp', width: 150},
+			]
+		};
+
+    }])
+    .controller('BikersCtrl', ["$scope", "$http", "$location", '$route', "apigeeDataService", function ($scope, $http, $location, $route, apigeeDataService) {
+		 $scope.apigee = apigeeDataService;
+		 //$scope.apigee.refreshSensorData();
+		 $scope.myData = $scope.apigee.entities;
+
+		$scope.gridOptions = { 
+			data: 'myData',
+			showGroupPanel: true,
+			jqueryUIDraggable: true,
+			columnDefs: [
+				{field:'Owner', width: 200},
+				{field:'Vehicle', width: 200},
+				{field:'GpsE', displayName: 'Longitude',  width: 200},
+				{field:'GpsN', displayName: 'Latitude',  width: 200},
+				{field:'Timestamp', width: 150}
+			]
+		};
+
+    }])
+    .controller('HomeCtrl', ["$scope", "$http", "$location", '$route', "apigeeDataService", function ($scope, $http, $location, $route, apigeeDataService) {
+		 $scope.apigee = apigeeDataService;
+		 $scope.apigee.refreshSensorData();
 	}]);

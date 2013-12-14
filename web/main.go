@@ -1,0 +1,4 @@
+package smartride
+
+func init() {
+}

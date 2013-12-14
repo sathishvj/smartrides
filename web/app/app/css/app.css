@@ -1,4 +1,9 @@
 /* app css stylesheet */
+@font-face {
+  font-family: Kersse;
+  src: url(http://goo.gl/6JKpz);
+  font-weight: 400;
+}
 /* This part was required for drop down menus.
 .menu {
 	list-style: none;
@@ -49,24 +54,75 @@
  *    }
  */
 
-}
-.navbar-header .logo {
-  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
-  font-size: 25px;
-  font-family: Verdana, Geneva, sans-serif;
-  letter-spacing: -1px;
-  margin-right: 10px;
-  color: yellow;
-}
-.navbar-header .logo:hover {
-  text-decoration: none;
-}
-.navbar-header a {
-  text-decoration: none;
+  /*
+ *
+ *    .logo {
+ *        text-shadow: 0 1px 0 #ccc,
+ *            0 2px 0 #c9c9c9,
+ *            0 3px 0 #bbb,
+ *            0 4px 0 #b9b9b9,
+ *            0 5px 0 #aaa,
+ *            0 6px 1px rgba(0,0,0,.1),
+ *            0 0 5px rgba(0,0,0,.1),
+ *            0 1px 3px rgba(0,0,0,.3),
+ *            0 3px 5px rgba(0,0,0,.2),
+ *            0 5px 10px rgba(0,0,0,.25),
+ *            0 10px 10px rgba(0,0,0,.2),
+ *            0 20px 20px rgba(0,0,0,.15);
+ *        font-size: 25px;
+ *        font-family: Verdana, Geneva, sans-serif;
+ *        letter-spacing: -1px;
+ *         margin-right: 10px;
+ *         color: yellow;
+ *        text-decoration: none;
+ *    }
+ *
+ *    .logo:hover {
+ *        text-decoration: none;
+ *    }
+ *
+ *    a {
+ *        text-decoration: none;
+ *    }
+ *
+ */
+
 }
 .navbar-header #appLogo {
   height: 80px;
   width: 150px;
+}
+.navbar-header .logo {
+  /*font-family: 'Kersse',helvetica,sans-serif;*/
+
+  font-family: helvetica, sans-serif;
+  color: #000;
+  font-size: 30px;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  /*transition*/
+
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  text-decoration: none;
+}
+.navbar-header .logo:hover {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 100px #ddd,                
+					 0 0 100px #ddd,                
+					 0 0 100px #ddd,                
+					 0 0 100px #ddd,                
+					 0 0 100px #ddd,                
+					 0 0 50px #eee,                
+					 0 0 50px #eee,                
+					 0 0 50px #eee,               
+					 0 0 50px #eee,                
+					 0 0 50px #eee;
 }
 .navbar-right p {
   font-style: italic;
@@ -135,7 +191,13 @@
 /* grids - begin */
 .gridStyle {
   border: 1px solid #d4d4d4;
-  width: 1000px;
+  width: 100%;
   height: 500px;
+}
+.orangecell {
+  background-color: orange;
+}
+.pinkcell {
+  background-color: hotpink;
 }
 /* grids - end */

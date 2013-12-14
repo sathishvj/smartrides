@@ -8,7 +8,8 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/home', {templateUrl: 'partials/home.tpl.html'});
     $routeProvider.when('/about', {templateUrl: 'partials/about.tpl.html'});
     $routeProvider.when('/sensors', {templateUrl: 'partials/sensors.tpl.html', controller: 'SensorsCtrl'});
-    $routeProvider.when('/bikes', {templateUrl: 'partials/bikes.tpl.html'});
+    $routeProvider.when('/bikes', {templateUrl: 'partials/bikes.tpl.html', controller: 'BikesCtrl'});
+    $routeProvider.when('/bikers', {templateUrl: 'partials/bikers.tpl.html', controller: 'BikersCtrl'});
     $routeProvider.when('/bikergangs', {templateUrl: 'partials/bikergangs.tpl.html'});
     $routeProvider.when('/feedback', {templateUrl: 'partials/feedback.tpl.html', controller: 'FeedbackCtrl'});
     $routeProvider.otherwise({redirectTo: '/home'});
