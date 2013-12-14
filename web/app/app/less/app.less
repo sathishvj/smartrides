@@ -40,15 +40,50 @@
 .navbar-header {
 	margin-top: 5px;
 
+/*
+ *    .logo {
+ *        font-size: 24px;
+ *        text-decoration: none;
+ *        color: steelblue;
+ *        margin-right: 5px;
+ *
+ *        a {
+ *            text-decoration: none;
+ *        }
+ *    }
+ */
+ 	
 	.logo {
-		font-size: 24px;
-		text-decoration: none;
-		color: steelblue;
-		margin-right: 5px;
+		text-shadow: 0 1px 0 #ccc,
+			0 2px 0 #c9c9c9,
+			0 3px 0 #bbb,
+			0 4px 0 #b9b9b9,
+			0 5px 0 #aaa,
+			0 6px 1px rgba(0,0,0,.1),
+			0 0 5px rgba(0,0,0,.1),
+			0 1px 3px rgba(0,0,0,.3),
+			0 3px 5px rgba(0,0,0,.2),
+			0 5px 10px rgba(0,0,0,.25),
+			0 10px 10px rgba(0,0,0,.2),
+			0 20px 20px rgba(0,0,0,.15);
+		font-size: 25px;
+		font-family: Verdana, Geneva, sans-serif;
+		letter-spacing: -1px;
+		 margin-right: 10px;
+		 color: yellow;
+	}
 
-		a {
-			text-decoration: none;
-		}
+	.logo:hover {
+		text-decoration: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	#appLogo {
+		height: 80px;
+		width: 150px;
 	}
 }
 
@@ -60,3 +95,79 @@
 
 /* navbar - end */
 
+
+/* d3 sunburst - start */
+#d3sunburst {
+#main {
+	float: left;
+	width: 750px;
+	}
+
+#sidebar {
+	float: right;
+	width: 100px;
+	}
+
+#sequence {
+	width: 600px;
+	height: 70px;
+	}
+
+#legend {
+	padding: 10px 0 0 3px;
+	}
+
+#sequence text, #legend text {
+		font-weight: 600;
+	fill: #fff;
+	}
+
+#chart {
+	position: relative;
+	}
+
+#chart path {
+	stroke: #fff;
+	}
+
+#explanation {
+	position: absolute;
+	top: 260px;
+	left: 305px;
+	width: 140px;
+		   text-align: center;
+	color: #666;
+		   z-index: -1;
+	}
+
+#percentage {
+		font-size: 2.5em;
+	}
+}
+/* d3 sunburst - end */
+
+/* d3ShowReel - begin */
+#d3ShowReelChart {
+	svg {
+	  font-family: "Helvetica Neue", Helvetica;
+	}
+
+	.line {
+	  fill: none;
+	  stroke: #000;
+	  stroke-width: 2px;
+	}
+}
+/* d3ShowReel - end */
+
+/* charts - begin */
+#showReelDiv {
+	height: 600px;
+	width: 1000px;
+}
+
+.chartdiv {
+	border: 1px dotted lightgray;
+	margin: 5px;
+}
+/* charts - end */

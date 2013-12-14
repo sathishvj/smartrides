@@ -1,16 +1,18 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-6 chartdiv">
+			<h3>The Rider Network</h3>
+			<div ng-include src="'partials/d3sunburst.tpl.html'">
+			</div>
 		</div>
 		<div class="col-md-6">
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4">
-		</div>
-		<div class="col-md-4">
-		</div>
-		<div class="col-md-4">
+		<div id="showReelDiv" class="col-md-10 chartdiv col-md-offset-1">
+			<h3>Most Used Bikes</h3>
+			<div ng-include src="'partials/showreel.tpl.html'">
+			</div>
 		</div>
 	</div>
 </div>

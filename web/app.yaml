@@ -35,6 +35,9 @@ handlers:
 - url: /partials
   static_dir: app/app/partials
 
+- url: /testdata
+  static_dir: app/app/testdata
+
 #- url: /partials/admin.html
   #static_files: app/app/partials/admin.html
   #upload: app/app/partials/admin.html

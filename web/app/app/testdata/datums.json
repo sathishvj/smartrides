@@ -1,21 +1,31 @@
 [{
-	"Index": "1",
-		"Owner": "Brad Pitt",
-		"Vehicle": "Ducati Desmosedici",
-		"SensorType": "temperature",
-		"SenosrId": "1234",
-		"Timestamp": "2013/12/14 01:20",
-		"Data": {
-			"Value": "23.5"
-		}
+	"Owner": "Brad Pitt",
+	"Vehicle": "Ducati Desmosedici",
+	"VehicleId": "KA1",
+	"SensorType": "temperature",
+	"SenosrId": "1234",
+	"Timestamp": "2013/12/14 01:20",
+	"Data": {
+		"Value": "23.5"
+	}
 },{
-	"Index": "1",
-		"Owner": "Brad Pitt",
-		"Vehicle": "Ducati Desmosedici",
-		"SensorType": "temperature",
-		"SenosrId": "1234",
-		"Timestamp": "2013/12/14 01:20",
-		"Data": {
-			"Value": "23.5"
-		}
+	"Owner": "Brad Pitt",
+	"Vehicle": "Ducati Desmosedici",
+	"VehicleId": "KA1",
+	"SensorType": "temperature",
+	"SenosrId": "1234",
+	"Timestamp": "2013/12/14 01:20",
+	"Data": {
+		"Value": "23.5"
+	}
+},{
+	"Owner": "Brad Pitt",
+	"Vehicle": "Ducati Desmosedici",
+	"VehicleId": "KA1",
+	"SensorType": "temperature",
+	"SenosrId": "1234",
+	"Timestamp": "2013/12/14 01:20",
+	"Data": {
+		"Value": "23.5"
+	}
 }]
