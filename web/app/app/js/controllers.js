@@ -3,7 +3,7 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('NavCtrl', ["$scope", "$http", "$location", "optionsService",  '$route', 'projectService', function ($scope, $http, $location, optionsService, $route, projectService) {
+    .controller('NavCtrl', ["$scope", "$http", "$location", '$route', function ($scope, $http, $location, $route) {
 		switch($location.path()) {
 			case "":
 			case "/home":
@@ -110,20 +110,6 @@ angular.module('myApp.controllers', [])
 				//longitude: mapService.location.lon 
 			//};
 		//});
-	}])
-    .controller('SensorsCtrl', ["$scope", "$http", "$location", '$route', function ($scope, $http, $location, $route) {
-		$scope.myData = [{name: "Moroni", age: 50},
-			{name: "Tiancum", age: 43},
-			{name: "Jacob", age: 27},
-			{name: "Nephi", age: 29},
-			{name: "Enos", age: 34}
-		];
-
-		$scope.gridOptions = { 
-			data: 'myData',
-			showGroupPanel: true,
-			jqueryUIDraggable: true
-		};
 	}])
     .controller('d3SunburstCtrl', ["$scope", "$http", "$location", '$route', function ($scope, $http, $location, $route) {
 		var width = 450;
@@ -1006,4 +992,52 @@ angular.module('myApp.controllers', [])
 			lines();
 		  }, duration);
 		}
+    }])
+    .controller('SensorsCtrl', ["$scope", "$http", "$location", '$route', "apigeeDataService", function ($scope, $http, $location, $route, apigeeDataService) {
+		$scope.myData = [{name: "Moroni", age: 50},
+			{name: "Tiancum", age: 43},
+			{name: "Jacob", age: 27},
+			{name: "Nephi", age: 29},
+			{name: "Enos", age: 34}
+		];
+
+		
+		 $scope.apigee = apigeeDataService;
+		 $scope.apigee.refreshSensorData();
+		 $scope.myData = $scope.apigee.entities;
+		console.log($scope); 
+
+		$scope.gridOptions = { 
+			data: 'myData',
+			//data: $scope.apigee.entities
+			//data: $scope.apigee.entities
+			showGroupPanel: true,
+			jqueryUIDraggable: true
+		};
+
+		/*
+		 *$scope.$watch( function() {
+		 *       return apigeeDataService.entities;
+		 *}, function( value ) {
+		 *    if (value) {
+		 *       console.log("Value is:" +  value );
+		 *        $scope.gridOptions.data = value;			   
+		 *        $scope.$apply($scope.gridOpitons);
+		 *    }
+		 *});
+		 */
+		
+			$http({method: 'GET', url: 'https://api.usergrid.com/dpacmittal/smartride/data?access_token=YWMtUb-iomSwEeO37neVzQ_UIwAAAUMU2UVKeqDJX-ONKdlr3hFOIdCavLPO4f8'}).
+				  success(function(data, status, headers, config) {
+					  console.log("Data from app services:" + data + "\n, with status: " + status);
+					  console.log(data.entities);
+					  //apigee.allData = data;
+					  //apigee.entities = data.entities;
+					  //$scope.gridOptions.data = data.entities;
+					  //$scope.$apply();
+				  }).
+				  error(function(data, status, headers, config) {
+					  console.log("Error in http request to  app services:" + data+ "\n with status: " + status);
+				  });
+		
 	}]);
