@@ -45,12 +45,12 @@ angular.module('myApp.controllers', [])
 				steps: [
 				{
 					element: document.querySelector('.logo'),
-					intro: "Smart Ride connects your bike rides, bikers, and bikes.",
+					intro: "Smart Ride connects your bike rides, bikers, and bikes and is able to collect various data using sensors.",
 					position: 'bottom'
 				},
 				{
-					element: document.querySelector('#menuBikes'),
-					intro: "Get a view of all the vehicles you are managing.",
+					element: document.querySelector('#menuHome'),
+					intro: "A dashboard of all your activities and a visualization of available data. (Currently a mock up with saved data.)",
 					position: 'bottom'
 				},
 				{
@@ -59,10 +59,22 @@ angular.module('myApp.controllers', [])
 					position: 'bottom'
 				},
 				{
-					element: document.querySelector('#menuBikerGangs'),
-					intro: "Group your bikes to manage them together.",
+					element: document.querySelector('#menuBikes'),
+					intro: "Get a view of all the vehicles you are managing.",
+					position: 'bottom'
+				},
+				{
+					element: document.querySelector('#menuBikers'),
+					intro: "Get a view of all the vehicles you are managing.",
 					position: 'bottom'
 				}
+				,
+				{
+					element: document.querySelector('#menuBikerGangs'),
+					intro: "Group your rides based on the gangs you are riding with and see data about each ride.",
+					position: 'bottom'
+				}
+				
 			]
 			});
 
