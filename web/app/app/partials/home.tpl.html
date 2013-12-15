@@ -1,15 +1,17 @@
 <div class="container" ng-controller="HomeCtrl">
+	<div class="row text-center">
+		<div class="btn-group ">
+			<button type="button" class="btn btn-default" ng-click="setSelectedChart('mostUsedBikes')">Most Used Bike Models</button>
+			<button type="button" class="btn btn-default" ng-click="setSelectedChart('riderNetwork')">The Rider Network</button>
+		</div>
+	</div>
 	<div class="row">
-		<div class="col-md-6 chartdiv">
+		<div class="col-md-6 chartdiv slide-up" ng-show="selectedChart=='riderNetwork'">
 			<h3>The Rider Network</h3>
 			<div ng-include src="'partials/d3sunburst.tpl.html'">
 			</div>
 		</div>
-		<div class="col-md-6">
-		</div>
-	</div>
-	<div class="row">
-		<div id="showReelDiv" class="col-md-10 chartdiv col-md-offset-1">
+		<div id="showReelDiv" class="col-md-10 chartdiv col-md-offset-1 slide-up" ng-show="selectedChart=='mostUsedBikes'">
 			<h3>Most Used Bikes</h3>
 			<div ng-include src="'partials/showreel.tpl.html'">
 			</div>

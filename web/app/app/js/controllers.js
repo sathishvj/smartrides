@@ -115,8 +115,8 @@ angular.module('myApp.controllers', [])
 		//});
 	}])
     .controller('d3SunburstCtrl', ["$scope", "$http", "$location", '$route', function ($scope, $http, $location, $route) {
-		var width = 450;
-		var height = 300;
+		var width = 960;
+		var height = 600;
 		var radius = Math.min(width, height) / 2;
 
 		// Breadcrumb dimensions: width, height, spacing, width of tip/tail.
@@ -1089,4 +1089,10 @@ angular.module('myApp.controllers', [])
     .controller('HomeCtrl', ["$scope", "$http", "$location", '$route', "apigeeDataService", function ($scope, $http, $location, $route, apigeeDataService) {
 		 $scope.apigee = apigeeDataService;
 		 $scope.apigee.refreshSensorData();
+
+		 $scope.selectedChart = "mostUsedBikes";
+
+		 $scope.setSelectedChart = function(chart) {
+			 $scope.selectedChart = chart;
+		 };
 	}]);

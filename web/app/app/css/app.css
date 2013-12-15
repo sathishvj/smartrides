@@ -131,14 +131,18 @@
 /* d3 sunburst - start */
 #d3sunburst #main {
   float: left;
-  width: 750px;
+  width: 1000px;
+  /*width: 100%;*/
+
 }
 #d3sunburst #sidebar {
   float: right;
   width: 100px;
 }
 #d3sunburst #sequence {
-  width: 600px;
+  /*width: 600px;*/
+
+  width: 100%;
   height: 70px;
 }
 #d3sunburst #legend {
@@ -184,7 +188,8 @@
   width: 1000px;
 }
 .chartdiv {
-  border: 1px dotted lightgray;
+  /*border: 1px dotted lightgray;*/
+
   margin: 5px;
 }
 /* charts - end */
